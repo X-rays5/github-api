@@ -1,7 +1,8 @@
 export function JsonResponse(body: any): Response {
     return new Response(JSON.stringify(body), {
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'
         }
     });
 }
